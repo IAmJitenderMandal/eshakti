@@ -16,11 +16,11 @@ export default function Home({ homePageData }) {
       {/* top navbar  */}
       <TopNav />
       {/* main navbar */}
-      {/* <Navbar /> */}
+      <Navbar />
       {/* hero section */}
-      {/* <HeroSection /> */}
+      <HeroSection />
       {/* mid banner */}
-      {/* <MidBanner /> */}
+      <MidBanner />
       {/* top selling product section */}
       {/* <ProductListing */}
       {/* // title={homePageData.topSellingProducts.title} */}
