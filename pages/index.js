@@ -2,13 +2,13 @@ import Head from "next/head";
 
 // custom components
 import TopNav from "../components/topNavbar/TopNav.component";
-import Navbar from "../components/navBar/Navbar.component";
-import HeroSection from "../components/heroSection/HeroSection.component";
-import ProductListing from "../components/productListing/ProductListing.component";
-import SaleBanner from "../components/saleBanner/SaleBanner.component";
-import MidBanner from "../components/mid-banner/MidBanner.component";
-import OurQualities from "../components/ourQualities/OurQualities.component";
-import Footer from "../components/footer/Footer.component";
+// import Navbar from "../components/navBar/Navbar.component";
+// import HeroSection from "../components/heroSection/HeroSection.component";
+// import ProductListing from "../components/productListing/ProductListing.component";
+// import SaleBanner from "../components/saleBanner/SaleBanner.component";
+// import MidBanner from "../components/mid-banner/MidBanner.component";
+// import OurQualities from "../components/ourQualities/OurQualities.component";
+// import Footer from "../components/footer/Footer.component";
 
 export default function Home({ homePageData }) {
   return (
@@ -16,27 +16,27 @@ export default function Home({ homePageData }) {
       {/* top navbar  */}
       <TopNav />
       {/* main navbar */}
-      <Navbar />
+      {/* <Navbar /> */}
       {/* hero section */}
-      <HeroSection />
+      {/* <HeroSection /> */}
       {/* mid banner */}
-      <MidBanner />
+      {/* <MidBanner /> */}
       {/* top selling product section */}
-      <ProductListing
-        title={homePageData.topSellingProducts.title}
-        description={homePageData.topSellingProducts.description}
-      />
+      {/* <ProductListing */}
+      {/* // title={homePageData.topSellingProducts.title} */}
+      {/* // description={homePageData.topSellingProducts.description} */}
+      {/* // /> */}
       {/* new arrivel product section */}
-      <ProductListing
-        title={homePageData.newArrivalProducts.title}
-        description={homePageData.newArrivalProducts.description}
-      />
+      {/* <ProductListing */}
+      {/* // title={homePageData.newArrivalProducts.title} */}
+      {/* // description={homePageData.newArrivalProducts.description} */}
+      {/* // /> */}
       {/* deal of the week banner */}
-      <SaleBanner />
+      {/* <SaleBanner /> */}
       {/* our OurQualities area */}
-      <OurQualities />
+      {/* <OurQualities /> */}
       {/* footer area */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
