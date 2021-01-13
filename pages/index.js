@@ -2,13 +2,13 @@ import Head from "next/head";
 
 // custom components
 import TopNav from "../components/topNavbar/TopNav.component";
-// import Navbar from "../components/navBar/Navbar.component";
-// import HeroSection from "../components/heroSection/HeroSection.component";
-// import ProductListing from "../components/productListing/ProductListing.component";
-// import SaleBanner from "../components/saleBanner/SaleBanner.component";
-// import MidBanner from "../components/mid-banner/MidBanner.component";
-// import OurQualities from "../components/ourQualities/OurQualities.component";
-// import Footer from "../components/footer/Footer.component";
+import Navbar from "../components/navBar/Navbar.component";
+import HeroSection from "../components/heroSection/HeroSection.component";
+import ProductListing from "../components/productListing/ProductListing.component";
+import SaleBanner from "../components/saleBanner/SaleBanner.component";
+import MidBanner from "../components/mid-banner/MidBanner.component";
+import OurQualities from "../components/ourQualities/OurQualities.component";
+import Footer from "../components/footer/Footer.component";
 
 export default function Home({ homePageData }) {
   return (
