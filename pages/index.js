@@ -1,65 +1,61 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
 
-export default function Home() {
+// custom components
+import TopNav from "../components/topNavbar/TopNav.component";
+import Navbar from "../components/navBar/Navbar.component";
+import HeroSection from "../components/heroSection/HeroSection.component";
+import ProductListing from "../components/productListing/ProductListing.component";
+import SaleBanner from "../components/saleBanner/SaleBanner.component";
+import MidBanner from "../components/mid-banner/MidBanner.component";
+import OurQualities from "../components/ourQualities/OurQualities.component";
+import Footer from "../components/footer/Footer.component";
+
+export default function Home({ homePageData }) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+    <div className="app">
+      {/* top navbar  */}
+      <TopNav />
+      {/* main navbar */}
+      <Navbar />
+      {/* hero section */}
+      <HeroSection />
+      {/* mid banner */}
+      <MidBanner />
+      {/* top selling product section */}
+      <ProductListing
+        title={homePageData.topSellingProducts.title}
+        description={homePageData.topSellingProducts.description}
+      />
+      {/* new arrivel product section */}
+      <ProductListing
+        title={homePageData.newArrivalProducts.title}
+        description={homePageData.newArrivalProducts.description}
+      />
+      {/* deal of the week banner */}
+      <SaleBanner />
+      {/* our OurQualities area */}
+      <OurQualities />
+      {/* footer area */}
+      <Footer />
     </div>
-  )
+  );
+}
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      homePageData: {
+        topSellingProducts: {
+          title: "Top Selling",
+          description:
+            "In our own little way we echo that. The idea of eShakti includes all women. Everywhere, Whatever their size, shape, height and style preferences.",
+        },
+        newArrivalProducts: {
+          title: "New Arrivel",
+          description:
+            "In our own little way we echo that. The idea of eShakti includes all women. Everywhere, Whatever their size, shape, height and style preferences.",
+        },
+      },
+    }, // will be passed to the page component as props
+  };
 }

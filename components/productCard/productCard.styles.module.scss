@@ -1,0 +1,42 @@
+.product_card {
+  .img {
+    height: 400px;
+    background-image: url("../../public/images/03.png");
+  }
+
+  .brand {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #7c7c7c;
+    margin-bottom: 0.7rem;
+  }
+
+  .product_name {
+    margin-bottom: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  .price_and_rating {
+    display: flex;
+    justify-content: space-between;
+
+    .prev_price {
+      margin-right: 1rem;
+      color: #7c7c7c;
+    }
+
+    .current_price {
+      color: rgb(255, 117, 117);
+      font-weight: 500;
+    }
+
+    .rating {
+      .each_star {
+        color: rgb(255, 171, 93);
+        // background-color: rgb(255, 171, 93);
+      }
+    }
+  }
+}
